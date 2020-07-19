@@ -1,5 +1,7 @@
 # Meditation
 
+**[Узрить собственными глазами](https://oldvirginmary.github.io/meditation/)**
+
 ## Технологии:
 * HTML
 * CSS
