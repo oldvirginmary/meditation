@@ -107,7 +107,7 @@
         self.start = function () {
             if (timer.status === "stopped") return;
 
-            document.querySelector(".process__total").dataset.color = self.color || "gray";
+            document.querySelector(".process__total").dataset.color = self.color;
 
             self.current.video.play();
             self.current.audio.play();
