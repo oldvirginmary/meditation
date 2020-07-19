@@ -1,0 +1,212 @@
+body {
+    font-family: "Roboto Slab", serif;
+}
+
+[hidden] {
+    display: none;
+}
+
+.app {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.time-selection {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+.time-selection > button {
+    padding: 12px 20px;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.time-selection > button:last-child {
+    margin-bottom: 0;
+}
+
+.time-selection.error > button {
+    border-color: red;
+}
+
+.time-selection > button:hover {
+    color: #1f1f1f;
+}
+
+.time-selection > button:focus {
+    border-color: #1f1f1f;
+}
+
+.process {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.process__management {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.process__line {
+    z-index: 0;
+    width: 250px;
+    height: 250px;
+
+    fill: transparent;
+}
+
+.process__total {
+    stroke: #1f1f1f
+}
+
+.process__total[data-color="orange"] {
+    stroke: #FF9500;
+}
+
+.process__total[data-color="blue"] {
+    stroke: #0077e6;
+}
+
+.process__filler {
+    stroke: #FFFFFF;
+}
+
+.process__button {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80px;
+    height: 80px;
+
+    fill: #ffffff;
+
+    cursor: pointer;
+}
+
+.process__button:hover {
+    fill: #1f1f1f;
+}
+
+.process--start {
+    left: 52%;
+}
+
+.process__time-left {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.mood-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.mood-selection > button {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.mood-selection > button:last-child {
+    margin-bottom: 0;
+}
+
+.mood-selection > button[value="beach"] {
+    font-size: 0;
+    background-color: #E68600;
+    background-image: url("../img/beach-icon.svg");
+}
+
+.mood-selection > button[value="rain"] {
+    font-size: 0;
+    background-color: #0077e6;
+    background-image: url("../img/rain-icon.svg");
+}
+
+
+@media (max-width: 768px) {
+    .app {
+        overflow-y: initial;
+    }
+
+    .controls {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .time-selection {
+        align-items: center;
+        order: 2;
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+
+    .time-selection > button {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .process {
+        margin-bottom: 35px;
+        order: 1;
+        margin-right: 0;
+    }
+
+    .mood-selection {
+        flex-direction: row;
+        justify-content: center;
+        order: 3;
+    }
+
+    .mood-selection > button {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .mood-selection > button:last-child {
+        margin-right: 0;
+    }
+}

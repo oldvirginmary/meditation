@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Медитатор</title>
+</head>
+<body>
+    <section class="app">
+        <section class="controls">
+            <section class="time-selection">
+                <button value="120">2 минуты</button>
+                <button value="300">5 минут</button>
+                <button value="600">10 минут</button>
+            </section>
+            <seciton class="process">
+                <div class="process__management">
+                    <svg class="process__line" version="1.1" viewBox="0 0 39.1 39.1">
+                        <circle class="process__total" cx="19.5" cy="19.5" r="18" 
+                            stroke-width="3"></circle>
+                        <circle class="process__filler" cx="19.5" cy="19.5" r="18"
+                            stroke-width="3.1" stroke-dasharray="113.09" stroke-dashoffset="0"></circle>
+                    </svg>
+                    <div class="process__buttons">
+                        <svg class="process__button process--start"
+                            version="1.1"
+                            viewBox="0 0 477.9 477.9"
+                            enable-background="new 0 0 477.9 477.9"
+                            area-labeledby="start-header">
+
+                            <title id="start-header">Начать</title>
+
+                            <g><g><path d="M476.1,231.3c-1.7-3.3-4.3-6-7.7-7.7L24.7,1.8C16.3-2.4,6,1,1.8,9.4c-1.2,2.4-1.8,5-1.8,7.6v443.7
+                                c0,9.4,7.6,17.1,17.1,17.1c2.7,0,5.3-0.6,7.6-1.8l443.7-221.9C476.9,250,480.3,239.8,476.1,231.3z" /></g></g>
+                            
+                        </svg>
+                        <svg class="process__button process--pause"
+                            version="1.1"
+                            viewBox="0 0 477.9 477.9"
+                            enable-background="new 0 0 477.9 477.9"
+                            area-labeledby="pause-header"
+                            hidden>
+
+                            <title id="pause-header">Закончить раньше</title>
+
+                            <g><g><path d="M187.7,0H51.2c-9.4,0-17.1,7.6-17.1,17.1v443.7c0,9.4,7.6,17.1,17.1,17.1h136.5c9.4,0,17.1-7.6,17.1-17.1V17.1
+                                C204.8,7.6,197.2,0,187.7,0z" /></g></g>
+                            <g><g><path d="M426.7,0H290.1c-9.4,0-17.1,7.6-17.1,17.1v443.7c0,9.4,7.6,17.1,17.1,17.1h136.5c9.4,0,17.1-7.6,17.1-17.1V17.1
+                                C443.7,7.6,436.1,0,426.7,0z" /></g></g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="process__time-left">0:00</div>
+            </seciton>
+            <section class="mood-selection">
+                <button value="beach" data-color="orange">Пляж</button>
+                <button value="rain" data-color="blue">Дождь</button>
+            </section>
+        </section>
+    </section>
+
+    <template class="video-template">
+        <video class="video" loop="true" muted>
+            <source type="video/mp4">
+        </video>
+    </template>
+
+    <template class="audio-template">
+        <audio class="audio">
+            <source type="audio/mp3">
+        </audio>
+    </template>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
